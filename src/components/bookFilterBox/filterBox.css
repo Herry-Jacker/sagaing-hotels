@@ -1,0 +1,29 @@
+.filter-box {
+    background: rgba(21, 94, 122, 0.4) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,.1);
+    backdrop-filter: blur(28px) !important;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 12px 10px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    div, button{
+        margin: 0 15px;
+    }
+}
+
+.filter-box select {
+    padding: 4px;
+}
+
+.filter-box input {
+    padding: 2px 4px;
+}
+
+.filter-box>div>span {
+    display: block;
+    text-align: left;
+    color: white;
+    margin-bottom: 10px;
+}
