@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import './nav.css'
-import { ActiveContext } from '../../App';
+import './nav.css';
 
 const FixNav = {
     position: "fixed",
@@ -8,68 +7,42 @@ const FixNav = {
     zIndex: 1200,
 }
 
-const NavItems = ({modal}) => {
-    const {activeItem, setActiveItem} = useContext(ActiveContext);
-    return (
-        <>
-            <li className={activeItem === 'home' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link Pcolor" data-bs-dismiss={modal} href="#">HOME</a>
-            </li>
-            <li className={activeItem === 'room' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link Pcolor" data-bs-dismiss={modal} href="#">ROOMS</a>
-            </li>
-            <li className={activeItem === 'about' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link Pcolor" data-bs-dismiss={modal} href="#">ABOUT</a>
-            </li>
-            <li className={activeItem === 'service' ? 'nav-item active' : 'nav-item'}>
-                <a className="nav-link Pcolor" data-bs-dismiss={modal} href='#'>SERVICES</a>
-            </li>
-        </>
-    )
-}
-
-const Modal = () => {
-  return (
-    <div className="modal d-md-none fade overflow-visible h-90" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-            <div className="modal-content back-filter2 Pcolor">
-                <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLabel">Menu</h5>
-                    <i type="button" className="fas fa-xmark fs-3" data-bs-dismiss="modal" aria-label="Close"></i>
-                </div>
-                <div className="modal-body mobile-nav text-center height-100 navbar d-block nav">
-                    <NavItems modal="modal"/>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
-}
-
-function changeNavColor(){
-	const navBarBgcolor = document.querySelector(".transpNav")
-	const navScrollValue = window.scrollY;
-	if(navScrollValue < 0){
-		navBarBgcolor.classList.remove("back-filter");
-	} else{
-		navBarBgcolor.classList.add("back-filter");
-	}
-}
-
-window.addEventListener("scroll", changeNavColor);
-
 export default function Nav() {
+
+  const changeMenu = () => {
+    document.querySelector('.toggle_menu').classList.toggle("mobile-active");
+  }
+
   return (
-    <nav className="navbar transpNav p-0 pt-1 navbar-expand-sm w-100" style={FixNav}>
+    <nav className="navbar back-filter p-0 pt-1 w-100" style={FixNav}>
         <div className='container' style={{maxWidth: 1200}}>
             <a className="navbar-brand pt-2 flex-fill logo" href="#">
-                <h3 className='Pcolor'>SGW Hotel</h3>
+                <h3 className='Pcolor'>Sagaing Hotels</h3>
             </a>
-            <div className="navbar d-none d-md-flex nav">
-                <NavItems/>
+            <form className="d-flex">
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button className="btn btn-outline-dark me-2" type="submit">Search</button>
+            </form>
+            <button className="navbar_toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span onClick={changeMenu} className="toggle_menu"><span></span></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <div className='flex-fill'></div>
+              <ul className="navbar-nav">
+                  <li className='nav-item'>
+                    <a className="nav-link Pcolor" aria-current="page" href="#">HOME</a>
+                  </li>
+                  <li className='nav-item'>
+                    <a className="nav-link Pcolor" href="#">ROOMS</a>
+                  </li>
+                  <li className='nav-item'>
+                    <a className="nav-link Pcolor" href="#">ABOUT</a>
+                  </li>
+                  <li className='nav-item'>
+                    <a className="nav-link Pcolor" href='#'>SERVICES</a>
+                  </li>
+              </ul>
             </div>
-            <i className='fas d-block d-md-none ms-4 me-2 fa-bars Pcolor fs-3' data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-            <Modal/>
         </div>
     </nav>
   )

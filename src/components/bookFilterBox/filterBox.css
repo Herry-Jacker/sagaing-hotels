@@ -1,5 +1,5 @@
 .filter-box {
-    background: rgba(21, 94, 122, 0.4) !important;
+    background: rgba(21, 94, 122, 1) !important;
     box-shadow: 0 6px 16px rgba(0,0,0,.1);
     backdrop-filter: blur(28px) !important;
     margin: 0 auto;

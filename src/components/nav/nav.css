@@ -38,3 +38,78 @@
   box-shadow: 0 6px 16px rgba(0,0,0,.1);
   backdrop-filter: blur(10px) !important;
 }
+
+.navbar_toggler {
+    position: relative;
+    border: none;
+    padding: 0;
+    width: 30px;
+}
+
+.toggle_menu {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    left: 0px;
+    top: 0px;
+}
+
+.toggle_menu::before {
+    bottom: 9px;
+}
+
+.toggle_menu span::before {
+    top: 0px;
+}
+
+.toggle_menu span::after {
+    top: 9.5px;
+}
+
+.toggle_menu:hover span::before {
+    top: -1px;
+}
+
+.toggle_menu:hover::before {
+    bottom: 8px;
+}
+
+.toggle_menu:before,
+.toggle_menu span,
+.toggle_menu span:before,
+.toggle_menu span:after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  width: 30px;
+}
+
+.toggle_menu.mobile-active:before {
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 10.5px;
+}
+
+    .toggle_menu.mobile-active span {
+    background-color: #fff;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 10.5px;
+}
+
+    .toggle_menu.mobile-active span:before,
+    .toggle_menu.mobile-active span:after {
+    opacity: 0;
+}
