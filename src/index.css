@@ -7,6 +7,13 @@
   --third: #00B2DF;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', 'Roboto', sans-serif;
+}
+
 .Pcolor {
     color: var(--primary) !important;
 }

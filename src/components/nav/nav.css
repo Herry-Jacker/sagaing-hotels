@@ -4,6 +4,8 @@
 
 .nav-link {
     font-weight: bolder;
+    text-align: center;
+    font-size: 25px;
 }
 
 .mobile-nav {

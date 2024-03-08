@@ -1,6 +1,17 @@
 import React, { useContext } from 'react';
 import './nav.css';
 
+
+const hotels = [
+  {name: 'one', link: '#'},
+  {name: 'one', link: '#'},
+  {name: 'one', link: '#'},
+  {name: 'one', link: '#'},
+  {name: 'one', link: '#'},
+  {name: 'one', link: '#'},
+  {name: 'one', link: '#'}
+]
+
 const FixNav = {
     position: "fixed",
     top: 0,
@@ -29,18 +40,13 @@ export default function Nav() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <div className='flex-fill'></div>
               <ul className="navbar-nav">
-                  <li className='nav-item'>
-                    <a className="nav-link Pcolor" aria-current="page" href="#">HOME</a>
-                  </li>
-                  <li className='nav-item'>
-                    <a className="nav-link Pcolor" href="#">ROOMS</a>
-                  </li>
-                  <li className='nav-item'>
-                    <a className="nav-link Pcolor" href="#">ABOUT</a>
-                  </li>
-                  <li className='nav-item'>
-                    <a className="nav-link Pcolor" href='#'>SERVICES</a>
-                  </li>
+                  {
+                    hotels.map( hotel => (
+                      <li className='nav-item'>
+                        <a className="nav-link Pcolor" aria-current="page" href={hotel.link}>{hotel.name}</a>
+                      </li>
+                    ))
+                  }
               </ul>
             </div>
         </div>
