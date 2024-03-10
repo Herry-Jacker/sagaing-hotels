@@ -1,0 +1,23 @@
+.image-slider {
+    img {
+        width: 100vw;
+        height: 600px;
+    }
+}
+
+.image-slider>button {
+    border: none;
+    font-size: 60px;
+    background: none;
+    position: absolute;
+    top: 285px;
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.image-slider>button:first-child {
+    left: 40px;
+}
+
+.image-slider>button:last-child {
+    right: 40px;
+}
