@@ -8,6 +8,10 @@
     font-size: 25px;
 }
 
+.navbar-nav {
+    height: 100vh;
+}
+
 .mobile-nav {
     display: flex !important;
     height: 70vh;
@@ -25,8 +29,6 @@
         content: "";
         display: block;
         height: 3px;
-        border-radius: 5px;
-        background-color: var(--third);
         margin: 0 3px;
     }
 }
@@ -81,7 +83,7 @@
 .toggle_menu span,
 .toggle_menu span:before,
 .toggle_menu span:after {
-  background-color: #fff;
+  background-color: var(--primary);
   content: "";
   display: block;
   height: 2px;
@@ -96,22 +98,20 @@
 }
 
 .toggle_menu.mobile-active:before {
-    background-color: #fff;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     top: 10.5px;
 }
 
-    .toggle_menu.mobile-active span {
-    background-color: #fff;
+.toggle_menu.mobile-active span {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     top: 10.5px;
 }
 
-    .toggle_menu.mobile-active span:before,
-    .toggle_menu.mobile-active span:after {
+.toggle_menu.mobile-active span:before,
+.toggle_menu.mobile-active span:after {
     opacity: 0;
 }

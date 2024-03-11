@@ -1,8 +1,49 @@
-.image-slider {
-    img {
-        width: 100vw;
+.mySwiper {
+    .slide {
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
         height: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    
+        .cta {
+            h2 {
+                font-weight: 800;
+            }
+            h3 {
+                font-weight: 600;
+            }
+            h3,h2 {
+                color: white;
+                text-shadow: 2px 2px black;
+                margin: 16px 0;
+            }
+            a {
+                margin-top: 18px;
+            }
+        }
     }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 33px !important;
+    background-color: var(--primary) !important;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 0 !important;
+    opacity: 0.99 !important;
+    width: 22px !important;
+    height: 5px !important;
+    background-color: #fff !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--primary) !important;
 }
 
 .image-slider>button {

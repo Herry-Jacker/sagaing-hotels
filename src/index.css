@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-  --primary: #155E7A;
+  --primary: gold;
   --bg: #D9D9D9;
   --text: #131313;
   --third: #00B2DF;
@@ -27,7 +27,8 @@
 }
 
 .back-filter {
-    background: rgba(249, 249, 251, 0.09) !important;
+    /* background: rgba(249, 249, 251, 0.09) !important; */
+    background: rgba(0, 0, 0, 0.7) !important;
     box-shadow: 0 6px 16px rgba(0,0,0,.1);
     backdrop-filter: blur(28px) !important;
 }

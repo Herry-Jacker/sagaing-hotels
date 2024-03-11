@@ -1,24 +1,13 @@
 import React, { useContext } from 'react';
 import './nav.css';
 
-
-const hotels = [
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'}
-]
-
 const FixNav = {
     position: "fixed",
     top: 0,
     zIndex: 1200,
 }
 
-export default function Nav() {
+export default function Nav({hotels}) {
 
   const changeMenu = () => {
     document.querySelector('.toggle_menu').classList.toggle("mobile-active");
@@ -32,7 +21,7 @@ export default function Nav() {
             </a>
             <form className="d-flex">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button className="btn btn-outline-dark me-2" type="submit">Search</button>
+              <button className="btn btn-outline-warning me-2" type="submit">Search</button>
             </form>
             <button className="navbar_toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span onClick={changeMenu} className="toggle_menu"><span></span></span>

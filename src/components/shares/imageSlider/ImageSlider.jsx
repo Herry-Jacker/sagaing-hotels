@@ -1,33 +1,40 @@
 import React from 'react';
 import './imageSlider.css';
-import SwiperCore from 'swiper';
-import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-SwiperCore.use([Pagination]);
-
-const ImageSlider = ({ images }) => {
-
+export default function App({ images }) {
   return (
-    <div className="image-slider">
+    <>
       <Swiper
-        slidesPerView={'auto'}
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image} alt={`Slide ${index}`} />
+            <div style={{backgroundImage: `url(${image})`}} className='slide'>
+              <div className='cta'>
+                <h3>Sagaing Golden World Hotel</h3>
+                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                <a className='btn btn-warning' href="#">Discover More</a>
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </>
   );
-};
-
-export default ImageSlider;
+}
