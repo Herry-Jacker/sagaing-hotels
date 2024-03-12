@@ -1,26 +1,29 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext } from 'react';
 import './App.css';
 import Nav from './components/nav/Nav';
 import Home from './pages/home/Home';
 
+// Hotel banner Images
+import HotelImg from './statics/hotel1.jpg'
+// Hotel banner Images
+
+export const HotelsContext = createContext(null);
 
 const hotels = [
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'},
-  {name: 'one', link: '#'}
+  {name: 'Example Hotel One', description: 'Example Something More Like This Is The Best', link: '#', bannerImage: HotelImg},
+  {name: 'Example Hotel One', description: 'Example Something More Like This Is The Best', link: '#', bannerImage: HotelImg},
+  {name: 'Example Hotel One', description: 'Example Something More Like This Is The Best', link: '#', bannerImage: HotelImg},
+  {name: 'Example Hotel One', description: 'Example Something More Like This Is The Best', link: '#', bannerImage: HotelImg},
+  {name: 'Example Hotel One', description: 'Example Something More Like This Is The Best', link: '#', bannerImage: HotelImg},
+  {name: 'Example Hotel One', description: 'Example Something More Like This Is The Best', link: '#', bannerImage: HotelImg},
+  {name: 'Example Hotel One', description: 'Example Something More Like This Is The Best', link: '#', bannerImage: HotelImg}
 ]
-
-export const ActiveContext = createContext(null);
 
 export default function App() {
   return (
-    <>
-      <Nav hotels={hotels}/>
+    <HotelsContext.Provider value={ hotels }>
+      <Nav/>
       <Home/>
-    </>
+    </HotelsContext.Provider>
   )
 }

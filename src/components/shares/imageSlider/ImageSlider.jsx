@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './imageSlider.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { HotelsContext } from '../../../App';
 
-export default function App({ images }) {
+export default function App() {
+
+  const hotels = useContext(HotelsContext);
+
   return (
     <>
       <Swiper
@@ -23,13 +27,13 @@ export default function App({ images }) {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        {images.map((image, index) => (
+        {hotels.map((hotel, index) => (
           <SwiperSlide key={index}>
-            <div style={{backgroundImage: `url(${image})`}} className='slide'>
+            <div style={{backgroundImage: `url(${hotel.bannerImage})`}} className='slide'>
               <div className='cta'>
-                <h3>Sagaing Golden World Hotel</h3>
-                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-                <a className='btn btn-warning' href="#">Discover More</a>
+                <h3>{hotel.name}</h3>
+                <h2>{hotel.description}</h2>
+                <a className='btn btn-warning' href={hotel.link}>Discover More</a>
               </div>
             </div>
           </SwiperSlide>

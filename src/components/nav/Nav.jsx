@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import './nav.css';
+import { HotelsContext } from '../../App';
 
 const FixNav = {
     position: "fixed",
@@ -7,7 +8,9 @@ const FixNav = {
     zIndex: 1200,
 }
 
-export default function Nav({hotels}) {
+export default function Nav() {
+
+  const hotels = useContext(HotelsContext);
 
   const changeMenu = () => {
     document.querySelector('.toggle_menu').classList.toggle("mobile-active");
