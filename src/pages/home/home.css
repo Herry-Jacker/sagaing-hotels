@@ -1,1 +1,12 @@
 
+.whyChooseUs {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    .container>.row>div {
+        color: var(--bg);
+        height: 40px;
+    }
+}
