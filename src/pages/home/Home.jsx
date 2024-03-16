@@ -16,11 +16,13 @@ const WhyChooseUs = () => {
   return (
     <div className='whyChooseUs'>
       <div className="container" style={{maxWidth: 1200}}>
-        <div className="row">
-          <div className='col-3'></div>
-          <div className='col-3'></div>
-          <div className='col-3'></div>
-          <div className='col-3'></div>
+        <div className="row justify-content-center">
+          <div className="col-11 col-lg-10 text-light text-center">
+            <h4 className='section-title'>Why Choose Us</h4>
+            <h2 className='main-title'>Sagaing Hotels And Resorts</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, iusto voluptatem dolorum soluta sed veniam vero?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum eum officia tempora sunt iure facere quasi doloribus dolores laborum saepe mollitia cumque corporis porro nisi, obcaecati voluptate? Deserunt, dolor consectetur.</p>
+          </div>
         </div>
       </div>
     </div>

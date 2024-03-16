@@ -9,6 +9,7 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        border-bottom: 3px solid var(--primary);
     
         .cta {
             h2 {
@@ -46,13 +47,8 @@
     color: var(--primary) !important;
 }
 
-.image-slider>button {
-    border: none;
-    font-size: 60px;
-    background: none;
-    position: absolute;
-    top: 285px;
-    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+.swiper-button-prev, .swiper-button-next {
+    display: none !important;
 }
 
 .image-slider>button:first-child {
