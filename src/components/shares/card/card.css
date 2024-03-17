@@ -1,0 +1,35 @@
+
+.card {
+    max-width: 600px;
+    aspect-ratio: 2/1;
+    margin: -80px auto;
+    border-radius: 0;
+    border-top: 5px solid var(--third);
+    background-color: var(--bg);
+    box-shadow: 6px 6px 18px var(--bg);
+    border-bottom: 5px solid var(--third);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    div {
+        height: 58%;
+    }
+    .divider {
+        width: 5px;
+        background-color: var(--third);
+    }
+    .c-title {
+        color: var(--third);
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        img {
+            width: 25%;
+            margin-bottom: 8px;
+            aspect-ratio: 1/1;
+        }
+    }
+}

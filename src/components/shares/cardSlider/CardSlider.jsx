@@ -1,6 +1,7 @@
 import React from 'react';
 import './cardSlider.css';
 import myImg from '../../../statics/riverView/sagaingBridge.jpg';
+import Card from '../card/Card';
 
 export default function CardSlider() {
   return (
@@ -9,7 +10,9 @@ export default function CardSlider() {
             <div style={{backgroundImage: `url(${myImg})`}}>
             </div>
             <div className='card-container'>
-                <div className="card"></div>
+                <Card>
+                  
+                </Card>
             </div>
         </div>
     </div>
