@@ -1,0 +1,22 @@
+.card-slider {
+    padding: 100px 0;
+    background-color: var(--secondary);
+}
+
+.temp-slider>div {
+    height: 450px;
+    margin: 0 auto;
+    background-position: center;
+    max-width: 950px;
+    background-size: cover;
+}
+
+.card-container {
+    padding: 0 30px;
+}
+
+.card {
+    max-width: 600px;
+    aspect-ratio: 2/1;
+    margin: -80px auto;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './home.css';
 import ImageSlider from '../../components/shares/imageSlider/ImageSlider';
+import CardSlider from '../../components/shares/cardSlider/CardSlider';
 
 const Banner = () => {
     
@@ -34,6 +35,7 @@ export default function Home() {
     <>
         <Banner/>
         <WhyChooseUs/>
+        <CardSlider/>
     </>
   )
 }

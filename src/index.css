@@ -3,8 +3,8 @@
 :root {
   --primary: gold;
   --bg: #191919;
-  --text: #a57c37;
   --third: #a57c37;
+  --secondary: #BFBFBF;
 }
 
 *{
@@ -26,33 +26,8 @@
     color: var(--text);
 }
 
-.section-title {
-    color: var(--primary);
-}
-
-.section-title:after {
-    display: inline-block;
-    margin: 0 0 8px 20px;
-    height: 1px;
-    content: " ";
-    text-shadow: none;
-    background-color: var(--primary);
-    width: 110px;
-}
-
-.section-title:before {
-    display: inline-block;
-    margin: 0 20px 8px 0;
-    height: 1px;
-    content: " ";
-    text-shadow: none;
-    background-color: var(--primary);
-    width: 110px;
-}
-
-.main-title {
-    margin: 30px auto;
-    color: var(--primary);
+.container {
+    max-width: 1020px;
 }
 
 .back-filter {
