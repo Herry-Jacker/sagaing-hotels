@@ -32,4 +32,22 @@
             aspect-ratio: 1/1;
         }
     }
+    .c-description {
+        display: flex;
+        flex-direction: column;
+        ul {
+            padding-left: 0;
+            list-style: none;
+            li {
+                margin: 8px 0;
+            }
+            i {
+                color: var(--third);
+            }
+            span {
+                margin-left: 8px;
+                color: var(--third);
+            }
+        }
+    }
 }
