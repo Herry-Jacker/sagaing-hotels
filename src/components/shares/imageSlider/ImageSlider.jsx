@@ -25,7 +25,7 @@ export default function App() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper bannerSlide"
       >
         {hotels.map((hotel, index) => (
           <SwiperSlide key={index}>

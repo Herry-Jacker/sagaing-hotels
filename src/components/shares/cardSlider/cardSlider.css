@@ -3,11 +3,10 @@
     background-color: var(--secondary);
 }
 
-.temp-slider>div {
+.slide-container>div {
     height: 450px;
     margin: 0 auto;
     background-position: center;
-    max-width: 950px;
     background-size: cover;
 }
 

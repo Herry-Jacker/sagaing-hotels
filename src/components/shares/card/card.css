@@ -2,7 +2,7 @@
 .card {
     max-width: 600px;
     aspect-ratio: 2/1;
-    margin: -80px auto;
+    margin: -100px auto;
     border-radius: 0;
     border-top: 5px solid var(--third);
     background-color: var(--bg);
